@@ -1,0 +1,61 @@
+package com.midproject;
+import java.util.Scanner;
+public class main {
+private Scanner scan;
+
+    public main() {
+        scan= new Scanner(System.in);
+       while(true){
+           System.out.println("\t\t\tSelamat datang di padie shop\n"+
+                   "\t\t\tMenu padie shop\n"+
+                   "\t\t\t1.Beli produk\n"+
+                   "\t\t\t2.Checkout\n"+
+                   "\t\t\t3.Exit\n");
+           System.out.println("Pilihan");
+           int pilihan = scan.nextInt();
+           switch (pilihan){
+               case 1:
+                   this.beliproduk();
+                   break;
+               case 2:
+                   this.checkout();
+                   break;
+               case 3:
+                   System.exit(5);
+                   break;
+               default:
+                   System.out.println("Eror");
+                   break;
+           }
+       }
+    }
+    void beliproduk(){
+        System.out.println("Silahkan pilih produk yang diinginkan\n"+
+        "1.Keranjang\n"+
+        "2.Jaket\n"+
+        "3.Baju\n");
+        int produk = scan.nextInt();
+        switch(produk){
+            case 1:
+                System.out.println("Produk telah dibeli. Harganya 200.000");
+                break;
+            case 2:
+                System.out.println("Produk telah dibeli. Harganya 150.000");
+                break;
+            case 3:
+                System.out.println("Produk telah dibeli. Harganya 100.000");
+                break;
+            default:
+                System.out.println("Eror");
+                break;
+
+        }
+    }
+    void checkout(){
+        System.out.println("Anda membeli keranjang dengan harga 200.000");
+    }
+    public static void main(String[] args) {
+        new main();
+
+        }
+    }
